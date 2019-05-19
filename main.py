@@ -12,6 +12,9 @@ W, H = 1280, 720
 fenetre = pygame.display.set_mode((W,H))
 pygame.display.set_caption('PlaineAlert')
 
+#Pour la Musique
+son = pygame.mixer.Sound("main.wav")
+
 #Collage du Fond
 fond = pygame.image.load('images/bg.png').convert()
 fondX = 0
@@ -201,6 +204,8 @@ coure = True
 
 #Le joueur vas courir
 EnCourse = Joueur(100, 527, 64, 64)
+#lance la musique
+son.play()
 
 obstacles = []
 pause = 0
